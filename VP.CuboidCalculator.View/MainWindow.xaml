@@ -32,13 +32,13 @@
         <Label Content="Længde (cm)" />
         <Label Grid.Row="1" Content="Højde (cm)" />
         <Label Grid.Row="2" Content="Bredde (cm)" />
-        <TextBox Grid.Column="1" Text="{Binding CubeLength}"/>
-        <TextBox Grid.Row="1"  Grid.Column="1" Text="{Binding CubeHeight}"/>
-        <TextBox Grid.Row="2"  Grid.Column="1" Text="{Binding CubeWidth}"/>
+        <TextBox Grid.Column="1" Text="{Binding CuboidLength}"/>
+        <TextBox Grid.Row="1"  Grid.Column="1" Text="{Binding CuboidHeight}"/>
+        <TextBox Grid.Row="2"  Grid.Column="1" Text="{Binding CuboidWidth}"/>
         <Image Grid.Column="2" Grid.RowSpan="5" Source="kasse.gif" Height="150"/>
         <Label Grid.Row="3" Content="Rumfang" />
         <Label Grid.Row="4" Content="Areal" />
-        <Label Grid.Row="3" Grid.Column="1" Content="{Binding CubeVolume}" />
-        <Label Grid.Row="4" Grid.Column="1" Content="{Binding CubeArea}" />
+        <Label Grid.Row="3" Grid.Column="1" Content="{Binding CuboidVolume}" />
+        <Label Grid.Row="4" Grid.Column="1" Content="{Binding CuboidArea}" />
     </Grid>
 </Window>

@@ -5,11 +5,11 @@ namespace VP.CuboidCalculator.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        public string CubeHeight { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
-        public string CubeWidth { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
-        public string CubeLength { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
-        public string CubeVolume { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
-        public string CubeArea { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
+        public string CuboidHeight { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
+        public string CuboidWidth { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
+        public string CuboidLength { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
+        public string CuboidVolume { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
+        public string CuboidArea { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
 
         private Cuboid _cuboid;
 
@@ -31,13 +31,13 @@ namespace VP.CuboidCalculator.ViewModels
             {
                 return;
             }
-            CubeArea = $"{_cuboid.GetArea() / (100 * 100)}m² {_cuboid.GetArea()}cm²";
-            CubeVolume = $"{_cuboid.GetVolume()/(100*100*100)}m³ {_cuboid.GetVolume()/(10*10*10)}(dm³)L {_cuboid.GetVolume()}cm³";
+            CuboidArea = $"{_cuboid.GetArea() / (100 * 100)}m² {_cuboid.GetArea()}cm²";
+            CuboidVolume = $"{_cuboid.GetVolume()/(100*100*100)}m³ {_cuboid.GetVolume()/(10*10*10)}(dm³)L {_cuboid.GetVolume()}cm³";
         }
 
         private void ParseInput()
         {
-            _cuboid = Cuboid.FromStrings(CubeWidth, CubeHeight, CubeLength);
+            _cuboid = Cuboid.FromStrings(CuboidWidth, CuboidHeight, CuboidLength);
         }
 
         protected override void OnPropertyChanged(string propertyName = null)
