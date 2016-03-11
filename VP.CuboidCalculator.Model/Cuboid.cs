@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace VP.CuboidCalculator.Model
 {
-    public class Cube
+    public class Cuboid
     {
-        public Cube(uint width, uint height, uint length)
+        public Cuboid(uint width, uint height, uint length)
         {
             Width = width;
             Height = height;
@@ -26,9 +26,9 @@ namespace VP.CuboidCalculator.Model
             return Width * Height * Length;
         }
 
-        public static Cube FromStrings(string width, string height, string length)
+        public static Cuboid FromStrings(string width, string height, string length)
         {
-            return new Cube(uint.Parse(width), uint.Parse(height), uint.Parse(length));
+            return new Cuboid(uint.Parse(width), uint.Parse(height), uint.Parse(length));
         }
     }
 }

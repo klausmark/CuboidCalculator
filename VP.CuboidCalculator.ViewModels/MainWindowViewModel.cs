@@ -11,7 +11,7 @@ namespace VP.CuboidCalculator.ViewModels
         public string CubeVolume { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
         public string CubeArea { get { return GetFieldWhereDefaultValueIs(""); } set { SetField(value); } }
 
-        private Cube _cube;
+        private Cuboid _cuboid;
 
         private void CalculateCube()
         {
@@ -31,13 +31,13 @@ namespace VP.CuboidCalculator.ViewModels
             {
                 return;
             }
-            CubeArea = $"{_cube.GetArea() / (100 * 100)}m² {_cube.GetArea()}cm²";
-            CubeVolume = $"{_cube.GetVolume()/(100*100*100)}m³ {_cube.GetVolume()/(10*10*10)}(dm³)L {_cube.GetVolume()}cm³";
+            CubeArea = $"{_cuboid.GetArea() / (100 * 100)}m² {_cuboid.GetArea()}cm²";
+            CubeVolume = $"{_cuboid.GetVolume()/(100*100*100)}m³ {_cuboid.GetVolume()/(10*10*10)}(dm³)L {_cuboid.GetVolume()}cm³";
         }
 
         private void ParseInput()
         {
-            _cube = Cube.FromStrings(CubeWidth, CubeHeight, CubeLength);
+            _cuboid = Cuboid.FromStrings(CubeWidth, CubeHeight, CubeLength);
         }
 
         protected override void OnPropertyChanged(string propertyName = null)
