@@ -5,23 +5,16 @@ namespace VP.CuboidCalculator.Model
 {
     public class Cube
     {
-        public Cube(int width, int height, int length)
+        public Cube(uint width, uint height, uint length)
         {
-            ValidateNumbers(Width, Height, Length);
-
             Width = width;
             Height = height;
             Length = length;
         }
 
-        private void ValidateNumbers(params int[] numbers)
-        {
-            if (numbers.Any(number => number < 0)) throw new ArgumentException("Cube can only have positive dimensions");
-        }
-
-        public int Width { get; }
-        public int Height { get; }
-        public int Length { get; }
+        public uint Width { get; }
+        public uint Height { get; }
+        public uint Length { get; }
 
         public decimal GetArea()
         {
@@ -35,7 +28,7 @@ namespace VP.CuboidCalculator.Model
 
         public static Cube FromStrings(string width, string height, string length)
         {
-            return new Cube(int.Parse(width), int.Parse(height), int.Parse(length));
+            return new Cube(uint.Parse(width), uint.Parse(height), uint.Parse(length));
         }
     }
 }
