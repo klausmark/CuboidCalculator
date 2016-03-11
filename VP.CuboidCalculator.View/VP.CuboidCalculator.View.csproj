@@ -7,7 +7,7 @@
     <ProjectGuid>{32B3C60D-7DD4-4FA2-BAA7-AB65A77CAFF6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CuboidCalculator</RootNamespace>
+    <RootNamespace>VP.CuboidCalculator.View</RootNamespace>
     <AssemblyName>CuboidCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +100,12 @@
     <Resource Include="kasse.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VP.CuboidCalculator.ViewModels\VP.CuboidCalculator.ViewModels.csproj">
+      <Project>{99679f73-e16f-43f7-bc95-3d6dd522f480}</Project>
+      <Name>VP.CuboidCalculator.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

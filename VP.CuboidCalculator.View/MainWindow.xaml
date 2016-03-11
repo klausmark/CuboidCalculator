@@ -1,9 +1,9 @@
-﻿<Window x:Class="CuboidCalculator.MainWindow"
+﻿<Window x:Class="VP.CuboidCalculator.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CuboidCalculator"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainWindowViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="210" Width="425" >
     <Window.Resources>
@@ -18,7 +18,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="100" />
+            <ColumnDefinition MinWidth ="170" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -32,14 +32,13 @@
         <Label Content="Længde (cm)" />
         <Label Grid.Row="1" Content="Højde (cm)" />
         <Label Grid.Row="2" Content="Bredde (cm)" />
-        <TextBox Grid.Column="1"/>
-        <TextBox Grid.Row="1"  Grid.Column="1"/>
-        <TextBox Grid.Row="2"  Grid.Column="1"/>
+        <TextBox Grid.Column="1" Text="{Binding CubeLength}"/>
+        <TextBox Grid.Row="1"  Grid.Column="1" Text="{Binding CubeHeight}"/>
+        <TextBox Grid.Row="2"  Grid.Column="1" Text="{Binding CubeWidth}"/>
         <Image Grid.Column="2" Grid.RowSpan="5" Source="kasse.gif" Height="150"/>
         <Label Grid.Row="3" Content="Rumfang" />
-        <Label Grid.Row="4" Content="Overflade" />
-        <Label Grid.Row="3" Grid.Column="1" Content="Resultat" />
-        <Label Grid.Row="4" Grid.Column="1" Content="Resultat" />
-        <Button Grid.Row="5" Grid.ColumnSpan="3" Content="Beregn"/>
+        <Label Grid.Row="4" Content="Areal" />
+        <Label Grid.Row="3" Grid.Column="1" Content="{Binding CubeVolume}" />
+        <Label Grid.Row="4" Grid.Column="1" Content="{Binding CubeArea}" />
     </Grid>
 </Window>

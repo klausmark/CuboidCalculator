@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboidCalculator", "CuboidCalculator\CuboidCalculator.csproj", "{32B3C60D-7DD4-4FA2-BAA7-AB65A77CAFF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VP.CuboidCalculator.View", "VP.CuboidCalculator.View\VP.CuboidCalculator.View.csproj", "{32B3C60D-7DD4-4FA2-BAA7-AB65A77CAFF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VP.CuboidCalculator.ViewModels", "VP.CuboidCalculator.ViewModels\VP.CuboidCalculator.ViewModels.csproj", "{99679F73-E16F-43F7-BC95-3D6DD522F480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VP.CuboidCalculator.Model", "VP.CuboidCalculator.Model\VP.CuboidCalculator.Model.csproj", "{974DED65-14EE-44EA-8A10-CA154323569F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{32B3C60D-7DD4-4FA2-BAA7-AB65A77CAFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32B3C60D-7DD4-4FA2-BAA7-AB65A77CAFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32B3C60D-7DD4-4FA2-BAA7-AB65A77CAFF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99679F73-E16F-43F7-BC95-3D6DD522F480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99679F73-E16F-43F7-BC95-3D6DD522F480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99679F73-E16F-43F7-BC95-3D6DD522F480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99679F73-E16F-43F7-BC95-3D6DD522F480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974DED65-14EE-44EA-8A10-CA154323569F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974DED65-14EE-44EA-8A10-CA154323569F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974DED65-14EE-44EA-8A10-CA154323569F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974DED65-14EE-44EA-8A10-CA154323569F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
